@@ -1,0 +1,44 @@
+<!-- <form class="w-50 py-5 m-auto" [formGroup]="registerForm" (ngSubmit)=" getRegisterInfo(registerForm)">
+
+
+
+    <div class="form-group">
+        <label for="">firstName:</label>
+        <input [class.is-valid]=" registerForm.get('first_name')?.errors ==null && 
+             registerForm.get('first_name')?.touched" formControlName="first_name" class="form-control my-2"
+            type="text">
+        <p *ngIf=" registerForm.get('first_name')?.errors !=null && registerForm.get('first_name')?.touched"
+            class="py-2 text-danger">FirstName inValid</p>
+    </div>
+
+    <div class="form-group">
+        <label for="">lastName:</label>
+        <input [class.is-valid]=" registerForm.get('last_name')?.errors ==null && 
+             registerForm.get('last_name')?.touched" formControlName="last_name" class="form-control my-2" type="text">
+        <p *ngIf=" registerForm.get('last_name')?.errors !=null && registerForm.get('last_name')?.touched"
+            class="py-2 text-danger">lastName inValid</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="">email:</label>
+        <input [class.is-valid]=" registerForm.get('email')?.errors ==null && 
+             registerForm.get('email')?.touched" formControlName="email" class="form-control my-2" type="text">
+        <p *ngIf=" registerForm.get('email')?.errors !=null && registerForm.get('email')?.touched"
+            class="py-2 text-danger">E-mail inValid</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="">password:</label>
+        <input [class.is-valid]=" registerForm.get('password')?.errors ==null && 
+             registerForm.get('password')?.touched" formControlName="password" class="form-control my-2" type="text">
+        <p *ngIf=" registerForm.get('password')?.errors !=null && registerForm.get('password')?.touched"
+            class="py-2 text-danger">password inValid</p>
+    </div>
+
+
+
+    <button [disabled]="registerForm.invalid" type="submit " class="btn bg-info text-white my-2">register</button>
+
+</form> -->

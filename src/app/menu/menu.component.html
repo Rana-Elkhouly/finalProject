@@ -1,0 +1,54 @@
+ 
+ <div class="menu pt-5">
+ <div class="container " >
+  
+    <div class="foods" >
+        <button class="myBtnMain   text-black m-2" *ngFor="let item of categorys ">
+            <a (mousemove)="filter(item)">{{item}}</a>
+
+        </button>
+<!--     
+    <button class="btn btn-warning text-black m-2" >
+        <a   (click)="filter('cakes')" >cakes</a>
+    
+    </button>
+
+    <button class="btn btn-warning text-black m-2" >
+        <a (click)="filter('Casseroles')" >Casseroles</a>
+        
+    </button>
+
+    <button class="btn btn-warning text-black m-2" >
+        <a   (click)="filter('meals')" >meals</a>
+            
+    </button> -->
+    <!-- <button routerLink="cart" style="width: 8%;height: 20%;" class="btn btn-danger">
+          <i style="font-size: 30px; color: black;" class="fa fa-cart-plus"></i>
+         <i class="fa-solid fa-cart-circle-plus"></i> 
+        <div style="font-size: 10px;" class="badge bg-dark">5</div>
+    </button> -->
+
+    </div>
+
+  
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory ">
+            <div class="mymenuuuu col-md-4">
+                <img  src="{{item.image}}" alt="">
+                <h5 class="titlecard text-black" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;direction: rtl;">{{item.title}}</h5>
+                  <p class="priceme"><strong>Price:</strong> ${{item.price}}</p>
+                  <button class="myBtnCard btn rounded-pill " (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,141 @@
+<div class="allcart">
+<ng-container *ngIf="products.length != 0">
+  
+  <div class="container">
+  <div class="row ">
+    <div class="card-table  ">
+      <div class="cart-product  ">
+        <table class="table table-responsive ">
+          <thead>
+            <tr>
+              <th style="color:black">Sr.No</th>
+              <th style="color:black">Product Name</th>
+              <th style=" color: black;">Product Image</th>
+
+              <th style="color:black;">Price</th>
+              <th style="color:black">Quantity</th>
+              <th style="color:black">Total</th>
+              <th style="color:black">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products; let i = index">
+              <td style="  color:black;">{{ i + 1 }}</td>
+              <td style=" color: #913e3e;">{{ item.title }}</td>
+              <td>
+                <img style="width: 120px;border-radius: 30%;" src="{{ item.image }}" alt="" />
+              </td>
+
+              <th style="width: 12% ;  color: #913e3e;">{{ item.price }}</th>
+              <th style="width:12% ;color: #913e3e;">
+                 <button  style="width:20% " (click)="plu()">+</button> &nbsp; 
+                <span  style="width:20% ">{{counter}}</span> &nbsp;
+                 <button style="width:20% "  (click)="inc()">-</button>  
+                <!-- <-- <button  (click)="incCount()" class="btn btn-default form-control increaseBtn">+</button>
+                -->
+              
+               <!-- <th style="width: 5%;">
+              <input type="number" style="width: 50%;color:white">{{item.Quantity}}
+              
+              </th>  -->
+              <!-- <td style="width: 12%;   color: #913e3e;">{{ item.Quantity }}</td> -->
+              <td style="width: 12%;  color: #913e3e;"> ${{ counter *item.price}}</td>
+              <td>
+                <button (click)="removeItem(item)" class="btn btn-danger">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td>
+                <button  class="mebtn" (click)="emptycart()" class="btn btn-danger">
+                  Empty Cart
+                </button>
+              </td>
+              <td>
+                <button  class="mebtn" routerLink="/menu" class="btn btn-warning">
+                  Shop More
+                </button>
+              </td>
+              <td><button  class="mebtn" routerLink="/checkout" class="btn btn-warning">Checkout</button></td>
+              <td>
+                <strong style="color:black">Grand Total : ${{ grandTotal*counter }}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img
+        src="data:image/jpeg;base64,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"
+        alt=""
+      />
+      <h4 style="color:rgb(223, 219, 219)">Your cart is empty!</h4>
+      <h6 style="color:rgb(223, 213, 213)">Add item to it now</h6>
+      <button routerLink="/menu" class="btn btn-warning">Shop Now</button>
+    </div>
+  </div>
+</ng-container>
+</div>
+
+
+<!-- <app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-not-found
+  [visible]="!cart || !cart.items.length"
+  notFoundMessage="Cart Page Is Empty!"
+  resetLinkText="Go To Homepage"
+></app-not-found>
+<div *ngIf="cart && cart.items.length" class="container">
+<ul>
+  <li *ngFor="let cartItem of cart.items">
+    <div>
+      <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+    </div>
+    <div>
+      <a routerLink="/food/{{cartItem.food.id}}">
+        {{cartItem.food.name}}
+      </a>
+    </div>
+    <div>
+      <select #quantitySelect
+      [value]="cartItem.quantity"
+      (change)="changeQuantity(cartItem, quantitySelect.value)">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    </div>
+    <div>
+      {{cartItem.price | currency}}
+    </div>
+
+    <div>
+      <button class="remove-button" (click)="removeFromCart(cartItem)">
+        Remove
+      </button>
+    </div>
+  </li>
+</ul>
+<div class="checkout">
+  <div>
+    <div class="foods-count">{{cart.totalCount}}</div>
+    <div class="total-price">{{cart.totalPrice|currency}}</div>
+  </div>
+
+  <a routerLink="/checkout">Proceed to Checkout</a>
+</div>
+</div> -->

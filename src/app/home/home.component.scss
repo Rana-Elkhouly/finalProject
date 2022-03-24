@@ -1,0 +1,237 @@
+body {
+  background-color: #4e4e4e;
+  color: #c09925;
+}
+
+.Mybody {
+  background-color: rgba($color: #dbdbdb, $alpha: 0.9);
+}
+
+.header {
+  height: 100vh;
+  background-image: url(../../assets/temp2.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+.layer {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header-content {
+  transition: transform 1s;
+}
+.header-content:hover {
+  transform: scale(1.5, 1.5);
+}
+.header-content h1 {
+  color: #ffce3b;
+  font-weight: 900;
+  font-size: 32px;
+  font-family: "Caveat", cursive;
+  font-family: "Sansita Swashed", cursive;
+}
+
+.header-content h4 {
+  font-family: "Caveat", cursive;
+  font-family: "Sansita Swashed", cursive;
+  color: rgb(255, 255, 255);
+}
+
+.our-services h2 {
+  font-weight: 900;
+  color: #bb9e46;
+  font-family: "Caveat", cursive;
+  font-family: "Sansita Swashed", cursive;
+}
+.our-services p {
+  font-family: "Asap Condensed", sans-serif;
+  font-family: "Caveat", cursive;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Sansita Swashed", cursive;
+  font-family: "Source Code Pro", monospace;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #313030;
+  position: relative;
+}
+.our-services p::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background-color: #0078ff;
+  top: 150%;
+  left: 48%;
+}
+.services-content h4 {
+  color: #bb9e46;
+
+  font-family: "Asap Condensed", sans-serif;
+  font-family: "Caveat", cursive;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Sansita Swashed", cursive;
+  font-family: "Source Code Pro", monospace;
+}
+.services-content p {
+  color: #313030;
+
+  font-family: "Asap Condensed", sans-serif;
+  font-family: "Caveat", cursive;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Sansita Swashed", cursive;
+  font-family: "Source Code Pro", monospace;
+}
+
+.services-box {
+  transition: 0.5s;
+  position: relative;
+  border: 3px #c09925 solid;
+  // background-color: rgba(red, green, blue, alpha)
+}
+.services-box:hover {
+  transform: scale(0.9);
+  border: 3px rgba(226, 108, 30, 0.904) solid;
+}
+.favorite-food {
+  color: #bb9e46;
+  font-weight: 900;
+  font-family: "Caveat", cursive;
+  font-family: "Sansita Swashed", cursive;
+}
+.d-block {
+  border-radius: 20%;
+}
+.carousel {
+  width: 65%;
+}
+.services-box span {
+  position: absolute;
+  left: 50%;
+  top: -8%;
+}
+.places h4 {
+  font-weight: 900;
+  color: #bb9e46;
+  font-family: "Caveat", cursive;
+  font-family: "Sansita Swashed", cursive;
+}
+.places p {
+  //font
+  font-family: "Asap Condensed", sans-serif;
+  font-family: "Caveat", cursive;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Sansita Swashed", cursive;
+  font-family: "Source Code Pro", monospace;
+  //style
+  cursor: pointer;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+.places p:hover {
+  color: #c09925;
+}
+.no-style {
+  cursor: auto;
+  color: rgba(0, 0, 0, 0.7);
+}
+.num {
+  color: #c09925;
+}
+.fa-phone {
+  color: #c09925;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.client-count-wrp {
+  background-color: rgba($color: #dbdbdb, $alpha: 0.9);
+  padding: 100px 0;
+}
+
+.heading h4 {
+  color: #bb9e46;
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-family: "Caveat", cursive;
+  font-family: "Sansita Swashed", cursive;
+}
+
+.client-count-wrp-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards h4 {
+  color: rgb(158, 52, 52);
+  font-size: 70px;
+  line-height: 65px;
+}
+
+.cards:first-child h4 {
+  color: #e4a600;
+  text-align: center;
+  width: 100%;
+}
+
+.cards:last-child h4 {
+  color: #c81010;
+  text-align: center;
+  width: 100%;
+}
+
+.cards:nth-child(2) h4 {
+  color: #48b84b;
+  text-align: center;
+  width: 100%;
+}
+
+.cards:nth-child(3) h4 {
+  color: #28a5df;
+text-align: center;
+  width: 100%;
+}
+
+.cards p {
+  color: #313030;
+  font-size: 20px;
+  font-family: "Asap Condensed", sans-serif;
+  font-family: "Caveat", cursive;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Sansita Swashed", cursive;
+  font-family: "Source Code Pro", monospace;
+}
+
+@media (max-width:991px) {
+  .mt-100 {
+      margin-top: 30px !important;
+  }
+  .client-count-wrp {
+      padding: 40px 0;
+  }
+  .client-count-wrp-inner {
+      flex-direction: column;
+  }
+  .cards h4 {
+      font-size: 50px;
+      line-height: 40px;
+  }
+  .cards {
+      margin: 20px 0;
+  }
+  .client-count-wrp {
+      padding: 25px 0;
+      margin: 0 25px;
+  }
+  /****/
+}

@@ -1,0 +1,91 @@
+<div style="padding-top: 7%;" class="checkout">
+    <div class="container-checkout container p-5 w-50  ">
+        <h4>Your Checkout :</h4>
+        
+            <!-- <h3>{{Name}}</h3>
+           
+            <h3>{{Email}}</h3>
+             -->
+   
+            <p class=" text-end">{{totalItem}} item</p>
+            <div class="checkout-item d-flex justify-content-between p-3  bg-light ">
+                <table style="width: 100%;" >
+                    <tr>
+                        <!-- <th style="color:black">Sr.No</th> -->
+                        <th style="color:black;width: 25%;" >Product Name</th>
+                        <!-- <th style=" color: black;">Product Image</th> -->
+                        &nbsp;
+                        <th style="color:black;width: 20%;">Price</th>
+                        &nbsp;
+                        <th style="color:black;width: 20%;">Quantity</th>
+                        &nbsp;
+                        <th style="color:black;width: 20%;">Total</th>
+                        &nbsp;
+                       
+                      </tr>
+                      
+                    <tr *ngFor="let item of products; let i = index" class="mb-2 rounded">
+                      
+                      <td style="color:#913e3e;width: 25%;">{{ item.title }}</td>
+                      &nbsp;
+                     
+                      <th style="color:#913e3e;width: 20%;">{{ item.price }}</th>
+                      &nbsp;
+<!-- 
+                      <th style="color:#913e3e;width: 20%;">{{ item.quantity }}</th>
+                      &nbsp;
+                       -->
+                     <th style="width:20% ;color:#913e3e;">
+                      <button style="width:2% "(click)="plu()">+</button>  
+                      <p  > {{counter}}</p> 
+                    <button style="width:2% "(click)="inc()">-</button>  
+                                <!-- <button  (click)="incCount()" class="btn btn-default form-control increaseBtn">+</button> -->
+                     </th>
+               
+                      &nbsp;
+                      <td style="width: 20%;color:#913e3e;"> ${{ counter *item.price}}</td>
+                      &nbsp;
+                     </tr>
+                     
+
+                    
+
+                     </table>
+                     <!-- <th style="width:20% ;color:#913e3e;">
+                      <button  (click)="plu()">+</button>  
+                      <p  > {{counter}}</p> 
+                    <button (click)="inc()">-</button>  
+                                <button  (click)="incCount()" class="btn btn-default form-control increaseBtn">+</button> -->
+                   
+                 
+                
+            </div>
+
+
+        
+
+        
+        <br>
+
+        <hr>
+        <div>
+           
+            <p>Delivery Free:&nbsp;&nbsp;&nbsp;<span>$00.00</span></p>
+            <p class="fw-bold">Total:&nbsp;&nbsp;&nbsp;<span>${{ grandTotal *counter}}</span></p>
+
+        </div>
+
+        
+        <button class="Confirm  mt-5  p-3 w-75 d-flex m-auto text-center rounded-pill ">Confirm Order</button>  
+   
+   
+<!--        
+        
+        <button class="Confirm  mt-5  p-3 w-75 d-flex m-auto text-center rounded-pill "  (click)="Confirm()">Confirm Order</button>  
+   
+    -->
+    </div>
+
+
+
+</div>
